@@ -59,6 +59,7 @@ a {
   margin: 10px;
   width: 25%;
   border: 2px solid darkblue;
+  border-radius: 2%;
 }
 
 .card:hover {
