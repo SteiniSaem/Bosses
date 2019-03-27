@@ -32,7 +32,7 @@
 }
 
 .navbar {
-  background-color: #e7e7e7;
+  background-color: darkblue;
   height: 80px;
 }
 
@@ -52,13 +52,13 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: center;
 }
 
 .card {
   margin: 10px;
   width: 25%;
-  border: 2px solid darkred;
+  border: 2px solid darkblue;
 }
 
 .card:hover {
@@ -80,7 +80,7 @@ a {
 .boss-name {
   margin: 10px;
   font-size: 20px;
-  color: darkred;
+  color: darkblue;
 }
 
 .boss-img {
