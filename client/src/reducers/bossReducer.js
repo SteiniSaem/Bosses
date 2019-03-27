@@ -1,4 +1,8 @@
-import { UPDATE_BOSSES, SET_CURRENT_BOSS } from "../constants/constants";
+import {
+  UPDATE_BOSSES,
+  SET_CURRENT_BOSS,
+  DELETE_BOSS
+} from "../constants/constants";
 
 const initialState = {
   bosses: [],

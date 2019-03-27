@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const NavLinks = () => {
   return (
-    <ul className="navbar-nav mr-auto">
+    <ul className="nav-list mr-auto">
       <li>
         <NavLink to="/">
           <img id="logo" src="../../lambo.png" />

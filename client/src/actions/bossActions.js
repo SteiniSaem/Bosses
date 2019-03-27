@@ -17,6 +17,13 @@ export const setCurrentBoss = id => {
   };
 };
 
+export const updateBosses = bosses => {
+  return {
+    type: UPDATE_BOSSES,
+    payload: bosses
+  };
+};
+
 const getBossesSuccess = bosses => {
   console.log("in getBosses action ");
   console.log(bosses);

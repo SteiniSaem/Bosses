@@ -1,12 +1,22 @@
 .navbar {
-  display: flex;
-  flex-direction: row;
   background-color: darkblue;
   height: 80px;
 }
 
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.nav-item {
+  border-left: 1px solid white;
+}
+
 .nav-link {
   color: white;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .bosses {
@@ -68,12 +78,21 @@ a {
 .card-header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid darkblue;
 }
 
 .card-body {
   display: flex;
   justify-content: center;
+  border-bottom: 1px solid darkblue;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  margin: 10px;
+  font-size: 15px;
+  float: right;
 }
 
 .boss-details {
