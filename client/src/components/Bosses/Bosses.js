@@ -1,5 +1,6 @@
 import React from "react";
 import ListView from "../ListView/ListView";
+import BossForm from "../BossForm/BossForm";
 import { connect } from "react-redux";
 
 class Bosses extends React.Component {
@@ -10,19 +11,7 @@ class Bosses extends React.Component {
     const { bossList } = this.props;
     return (
       <div className="bosses">
-        <div className="create-boss-form">
-          <h2>Create a boss</h2>
-          <input className="create-boss-form-input" placeholder="Boss name" />
-          <input
-            className="create-boss-form-input"
-            placeholder="Boss image url"
-          />
-          <textarea
-            className="create-boss-form-input boss-description-input"
-            placeholder="Description"
-          />
-          <button className="create-boss-btn">Create Boss</button>
-        </div>
+        <BossForm title="Create a boss" button="Create" />
         <ListView list={bossList} />
       </div>
     );

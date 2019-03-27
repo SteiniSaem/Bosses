@@ -78,7 +78,7 @@ a {
 
 .boss-details {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   margin: 25px;
 }
@@ -91,5 +91,5 @@ a {
 
 .boss-img {
   height: 300px;
-  margin: 20px;
+  margin: 50px;
 }
