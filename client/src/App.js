@@ -4,8 +4,14 @@ import Navbar from "./components/Navbar/Navbar";
 import Bosses from "./components/Bosses/Bosses";
 import BossDetails from "./components/BossDetails/BossDetails";
 import "./App.css";
+import { connect } from "react-redux";
+
+import { getBosses } from "./actions/bossActions";
 
 class App extends Component {
+  componentDidMount() {
+    this.props.getBosses();
+  }
   render() {
     return (
       <div className="App">
@@ -20,4 +26,13 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStatetoProps = reduxStoreState => {
+  return {
+    bosses: reduxStoreState.boss.bosses
+  };
+};
+
+export default connect(
+  mapStatetoProps,
+  { getBosses }
+)(App);
