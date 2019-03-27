@@ -9,7 +9,20 @@ class Bosses extends React.Component {
   render() {
     const { bossList } = this.props;
     return (
-      <div>
+      <div className="bosses">
+        <div className="create-boss-form">
+          <h2>Create a boss</h2>
+          <input className="create-boss-form-input" placeholder="Boss name" />
+          <input
+            className="create-boss-form-input"
+            placeholder="Boss image url"
+          />
+          <textarea
+            className="create-boss-form-input boss-description-input"
+            placeholder="Description"
+          />
+          <button className="create-boss-btn">Create Boss</button>
+        </div>
         <ListView list={bossList} />
       </div>
     );

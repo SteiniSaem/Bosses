@@ -36,6 +36,32 @@
   height: 80px;
 }
 
+.bosses {
+  display: flex;
+}
+
+.create-boss-form {
+  margin-left: 20px;
+}
+
+.create-boss-form-input {
+  font-size: 20px;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.boss-description-input {
+  height: 100px;
+}
+
+.create-boss-btn {
+  font-size: 20px;
+  padding: 10px;
+  background-color: darkblue;
+  color: white;
+}
+
 li {
   list-style-type: none;
 }
@@ -52,7 +78,6 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .card {
