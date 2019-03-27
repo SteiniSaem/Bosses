@@ -32,8 +32,14 @@
 }
 
 .navbar {
+  display: flex;
+  flex-direction: row;
   background-color: darkblue;
   height: 80px;
+}
+
+.nav-link {
+  color: white;
 }
 
 .bosses {

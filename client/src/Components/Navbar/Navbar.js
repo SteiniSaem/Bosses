@@ -1,9 +1,10 @@
 import React from "react";
+import NavLinks from "../NavLinks/NavLinks";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <img id="logo" src="src/lambo.png" alt="shalom" />
+      <NavLinks />
     </nav>
   );
 };
