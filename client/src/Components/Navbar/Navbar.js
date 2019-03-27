@@ -1,11 +1,11 @@
 import React from "react";
 
-const NavigationBar = () => {
+const Navbar = () => {
   return (
-    <nav className="navigation-bar">
-      <img id="logo" src="./logo.png" />
+    <nav className="navbar">
+      <img id="logo" src="src/lambo.png" alt="shalom" />
     </nav>
   );
 };
 
-export default NavigationBar;
+export default Navbar;
