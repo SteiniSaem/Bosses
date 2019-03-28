@@ -23,6 +23,12 @@ export default function(state = initialState, action) {
         ...state,
         currentBoss: action.payload
       };
+    case DELETE_BOSS:
+      console.log("Deleting boss");
+      return {
+        ...state,
+        bosses: state.bosses.filter(boss => boss.id !== action.payload)
+      };
     default:
       return state;
   }

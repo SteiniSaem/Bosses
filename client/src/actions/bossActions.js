@@ -1,5 +1,9 @@
 import bossService from "../services/bossService";
-import { UPDATE_BOSSES, SET_CURRENT_BOSS } from "../constants/constants";
+import {
+  UPDATE_BOSSES,
+  SET_CURRENT_BOSS,
+  DELETE_BOSS
+} from "../constants/constants";
 
 export const getBosses = () => {
   return dispatch => {
@@ -17,10 +21,12 @@ export const setCurrentBoss = id => {
   };
 };
 
-export const updateBosses = bosses => {
-  return {
-    type: UPDATE_BOSSES,
-    payload: bosses
+export const deleteBoss = boss => {
+  console.log(boss);
+  return dispatch => {
+    return bossService.deleteBoss(boss).then(() => {
+      dispatch(deleteBossSuccess(boss.id));
+    });
   };
 };
 
@@ -41,5 +47,15 @@ const setCurrentBossSuccess = boss => {
   return {
     type: SET_CURRENT_BOSS,
     payload: boss
+  };
+};
+
+const deleteBossSuccess = id => {
+  console.log("in deleteBoss action");
+  console.log(id);
+
+  return {
+    type: DELETE_BOSS,
+    payload: id
   };
 };
