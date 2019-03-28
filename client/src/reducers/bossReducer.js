@@ -1,7 +1,8 @@
 import {
   UPDATE_BOSSES,
   SET_CURRENT_BOSS,
-  CREATE_BOSS
+  CREATE_BOSS,
+  DELETE_BOSS
 } from "../constants/constants";
 
 const initialState = {
