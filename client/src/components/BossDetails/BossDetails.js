@@ -20,7 +20,7 @@ class BossDetails extends React.Component {
         <div className="boss-details">
           <BossForm title="Edit boss" button="Edit" />
           <div className="boss-infoa">
-            <div className>
+            <div>
               <img className="boss-img" src={boss.img} />
             </div>
             <div className="boss-header">

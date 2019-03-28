@@ -1,2 +1,3 @@
 export const UPDATE_BOSSES = "UPDATE_BOSSES";
 export const SET_CURRENT_BOSS = "SET_CURRENT_BOSS";
+export const CREATE_BOSS = "CREATE_BOSS";

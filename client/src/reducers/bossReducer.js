@@ -1,4 +1,8 @@
-import { UPDATE_BOSSES, SET_CURRENT_BOSS } from "../constants/constants";
+import {
+  UPDATE_BOSSES,
+  SET_CURRENT_BOSS,
+  CREATE_BOSS
+} from "../constants/constants";
 
 const initialState = {
   bosses: [],
@@ -18,6 +22,13 @@ export default function(state = initialState, action) {
       return {
         ...state,
         currentBoss: action.payload
+      };
+    case CREATE_BOSS:
+      console.log("Creating bohs");
+      console.log(action.payload);
+      return {
+        ...state,
+        bosses: [...state.bosses, action.payload]
       };
     default:
       return state;
