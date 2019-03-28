@@ -2,7 +2,11 @@ import bossService from "../services/bossService";
 import {
   UPDATE_BOSSES,
   SET_CURRENT_BOSS,
+<<<<<<< HEAD
   CREATE_BOSS
+=======
+  DELETE_BOSS
+>>>>>>> 8bc287d5ea96906fc4de8bed0795525fd4d4a043
 } from "../constants/constants";
 
 export const getBosses = () => {
@@ -21,6 +25,7 @@ export const setCurrentBoss = id => {
   };
 };
 
+<<<<<<< HEAD
 export const createBoss = boss => {
   console.log("CREATE BOSS ");
   console.log(boss);
@@ -47,6 +52,14 @@ export const updateBosses = bosses => {
   return {
     type: UPDATE_BOSSES,
     payload: bosses
+=======
+export const deleteBoss = boss => {
+  console.log(boss);
+  return dispatch => {
+    return bossService.deleteBoss(boss).then(() => {
+      dispatch(deleteBossSuccess(boss.id));
+    });
+>>>>>>> 8bc287d5ea96906fc4de8bed0795525fd4d4a043
   };
 };
 
@@ -70,11 +83,21 @@ const setCurrentBossSuccess = boss => {
   };
 };
 
+<<<<<<< HEAD
 const createBossSuccess = boss => {
   console.log("creating boss in action");
 
   return {
     type: CREATE_BOSS,
     payload: boss
+=======
+const deleteBossSuccess = id => {
+  console.log("in deleteBoss action");
+  console.log(id);
+
+  return {
+    type: DELETE_BOSS,
+    payload: id
+>>>>>>> 8bc287d5ea96906fc4de8bed0795525fd4d4a043
   };
 };

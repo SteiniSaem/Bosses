@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { updateBosses } from "../../actions/bossActions";
+import { deleteBoss, getBosses } from "../../actions/bossActions";
 import { connect } from "react-redux";
 
 class ListViewItem extends React.Component {
@@ -15,9 +15,9 @@ class ListViewItem extends React.Component {
   }
 
   handleClick() {
-    const { updateBosses, bossList } = this.props;
-    const newBossList = bossList.filter(boss => boss.id != this.state.boss.id);
-    updateBosses(newBossList);
+    const { deleteBoss, bossList } = this.props;
+    deleteBoss(this.state.boss);
+    console.log(bossList);
   }
 
   render() {
@@ -49,5 +49,5 @@ const mapStateToProps = reduxStoreState => {
 
 export default connect(
   mapStateToProps,
-  { updateBosses }
+  { deleteBoss, getBosses }
 )(ListViewItem);
